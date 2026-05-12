@@ -1,18 +1,20 @@
-NAME =		test
-SRC =		test.c
-OBJ =		$(SRC:.c=.o)
 CC =		cc
-FLAGS =		-Wall -Wextra -lbsd
-LIB =		ft_printf/libftprintf.a
+CFLAGS =	-Wall -Wextra -I./libftprintf
+TARGETS =	test
+LDFLAGS =   -L./libftprintf -L./libftprintf/libft
+LDLIBS =    -lftprintf -lft
 
 # Default rule
-all: $(NAME)
+all: $(TARGETS)
 
 # Generic rule for all targets
 # $@ = Name of the target (e.g., test_part1)
 # $< = Name of the first dependency (e.g., test_part1.c)
-$(NAME): $(SRC) $(LIB)
-	$(CC) $(FLAGS) $(SRC) $(LIB) -o $(NAME)
+test: test.c libftprintf/libftprintf.a
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) $(LDLIBS)
+
+libftprintf/libftprintf.a:
+	$(MAKE) -C libftprintf
 
 clean:
 	rm -f $(TARGETS)
