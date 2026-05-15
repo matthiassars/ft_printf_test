@@ -12,8 +12,9 @@
 int main(void)
 {
 	int		a[4];
-	char	*nullch;
+	char	*nullchptr;
 
+	TEST_PRINTF("Hello world!\n")
 	TEST_PRINTF("Donald's nephews are %s, %s, and %s.\n",
 		"Huey", "Dewey", "Louie")
 	TEST_PRINTF(
@@ -28,7 +29,7 @@ int main(void)
 	TEST_PRINTF("%x %X %x %X %x %X %x %X %x %X %x %X %x %X %x %X %x %X\n",
 		16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 0xffffffff)
 	TEST_PRINTF("%p %p %p %p\n", a, a + 1, a + 2, a + 3)
-	nullch = (char *)NULL;
-	TEST_PRINTF("%s %p\n", nullch, NULL)
+	nullchptr = (char *)NULL;
+	TEST_PRINTF("%s %p\n", nullchptr, NULL)
 	return (0);
 }

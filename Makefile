@@ -1,22 +1,30 @@
-CC =		cc
-CFLAGS =	-Wall -Wextra -I./ft_printf -I./ft_printf/libft
-TARGETS =	test_ft_printf
-LDFLAGS =   -L./ft_printf -L./ft_printf/libft
-LDLIBS =    -lftprintf -lft
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror -I./ft_printf
+NAME    = test_ft_printf
+LDFLAGS = -L./ft_printf
+LDLIBS  = -lftprintf
 
-# Default rule
-all: $(TARGETS)
+SRC     = test_ft_printf.c
+OBJ     = $(SRC:.c=.o)
 
-test: test_ft_printf.c ft_prinf/libftprintf.a
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) $(LDLIBS)
+all: $(NAME)
 
-ft_prinf/libftprintf.a:
+$(NAME): $(OBJ) ft_printf/libftprintf.a
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LDLIBS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+ft_printf/libftprintf.a:
 	$(MAKE) -C ft_printf
 
 clean:
-	rm -f $(TARGETS)
+	rm -f $(OBJ)
+	$(MAKE) -C ft_printf clean
 
 fclean: clean
+	rm -f $(NAME)
+	$(MAKE) -C ft_printf fclean
 
 re: fclean all
 
