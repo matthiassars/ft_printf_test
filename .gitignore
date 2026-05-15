@@ -56,4 +56,4 @@ dkms.conf
 
 *.vscode/
 
-test
+test_ft_printf
