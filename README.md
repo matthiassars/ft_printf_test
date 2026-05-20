@@ -1,4 +1,6 @@
-*ft_printf_test, by Matthias Sars, <msars@student.42berlin.de>*
+# 🖨️ ft_printf_test
+
+*by Matthias Sars, <msars@student.42berlin.de>*
 
 ## Description
 Very simple test program for the project `ft_printf` from the 42 core curriculum (version 12.1). It simply runs the `ft_printf()` and `printf()` functions and outputs the return values of both. The bonus (flags like `%#`, `%+`) is not considered.
