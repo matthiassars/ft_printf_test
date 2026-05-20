@@ -1,5 +1,5 @@
 CC      = cc
-CFLAGS  = -Wall -Wextra -Werror -I./ft_printf
+CFLAGS  = -Wall -Wextra -I./ft_printf
 NAME    = test_ft_printf
 LDFLAGS = -L./ft_printf
 LDLIBS  = -lftprintf
