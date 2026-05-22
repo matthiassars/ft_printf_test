@@ -31,6 +31,6 @@ int main(void)
 	TEST_PRINTF("%p %p %p %p\n", a, a + 1, a + 2, a + 3)
 	nullchptr = (char *)NULL;
 	TEST_PRINTF("%s %p\n", nullchptr, NULL)
-	TEST_PRINTF(nullchptr)
+	TEST_PRINTF(nullchptr, 0)
 	return (0);
 }
