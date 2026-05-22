@@ -15,7 +15,7 @@ $(NAME): $(OBJ) ft_printf/libftprintf.a
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-ft_printf/libftprintf.a:
+ft_printf/libftprintf.a: ft_printf/*.c ft_printf/ft_printf.h
 	$(MAKE) -C ft_printf
 
 clean:
