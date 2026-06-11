@@ -1,4 +1,4 @@
-# 🖨️ ft_printf_test
+# 🖨️ `ft_printf` Test
 
 *by Matthias Sars, <msars@student.42berlin.de>*
 
