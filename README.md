@@ -8,4 +8,6 @@ Very simple test program for the project `ft_printf` from the 42 core curriculum
 ## Instructions
 My own `ft_printf` repo is contained as a submodule. To run it with another `ft_printf` repo, make sure your `ft_printf` directory is in this directory. Compile with `make` and run with `./test_ft_printf`.
 
+This tester also cases of which I'm not sure they are relevant, for example `ft_printf(NULL)` . If you get segmentation faults and you don't want to check for these cases, feel free to change the `.c` files.
+
 No guarantees; also perform your own tests!
